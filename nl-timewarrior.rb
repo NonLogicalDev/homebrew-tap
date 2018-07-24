@@ -1,4 +1,4 @@
-class Timewarrior < Formula
+class NlTimewarrior < Formula
   desc "Command-line time tracking application"
   homepage "https://taskwarrior.org/docs/timewarrior/"
   url "https://taskwarrior.org/download/timew-1.1.1.tar.gz"
