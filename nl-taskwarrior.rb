@@ -2,10 +2,7 @@ class NlTaskwarrior < Formula
   desc "Feature-rich console based todo list manager"
   homepage "https://taskwarrior.org/"
 
-  head "https://github.com/NonLogicalDev/fork.util.taskwarrior.git", :branch => "stable", :shallow => false
-  devel do
-    head "https://github.com/NonLogicalDev/fork.util.taskwarrior.git", :branch => "dev", :shallow => false
-  end
+  head "https://github.com/NonLogicalDev/fork.util.taskwarrior.git", :branch => "dev", :shallow => false
 
   option "without-gnutls", "Don't use gnutls; disables sync support"
   depends_on "cmake" => :build

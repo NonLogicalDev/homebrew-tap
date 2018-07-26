@@ -2,10 +2,7 @@ class NlTimewarrior < Formula
   desc "Command-line time tracking application"
   homepage "https://taskwarrior.org/docs/timewarrior/"
 
-  head "https://github.com/NonLogicalDev/fork.util.timewarrior.git", :branch => "stable"
-  devel do
-    head "https://github.com/NonLogicalDev/fork.util.timewarrior.git", :branch => "dev"
-  end
+  head "https://github.com/NonLogicalDev/fork.util.timewarrior.git", :branch => "dev"
 
   depends_on "cmake" => :build
 
