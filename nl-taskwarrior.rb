@@ -3,6 +3,9 @@ class NlTaskwarrior < Formula
   homepage "https://taskwarrior.org/"
 
   head "https://github.com/NonLogicalDev/fork.util.taskwarrior.git", :branch => "stable", :shallow => false
+  devel do
+    head "https://github.com/NonLogicalDev/fork.util.taskwarrior.git", :branch => "dev", :shallow => false
+  end
 
   option "without-gnutls", "Don't use gnutls; disables sync support"
   depends_on "cmake" => :build
@@ -21,7 +24,10 @@ class NlTaskwarrior < Formula
   end
 
   test do
-    touch testpath/".taskrc"
+    (testpath/".taskwarrior").mkpath
+    (testpath/".taskwarrior/data.task").mkpath
+    touch testpath/".taskwarrior/.taskwarrior.cfg"
+
     system "#{bin}/task", "add", "Write", "a", "test"
     assert_match "Write a test", shell_output("#{bin}/task list")
   end
